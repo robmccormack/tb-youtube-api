@@ -43,6 +43,7 @@ $(function() {
 function getYouTubeInfo(id, t) {
 
     // enter your YouTube id here:
+    // test junk ???
     //   id = "zJahlKPCL9g";
     //var id = "vslQm7IYME4";
 
