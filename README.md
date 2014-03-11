@@ -1,7 +1,7 @@
-tb-youtube-api
+YouTube JavaScript APIs  with Bootstrap 3
 ==============
 
-YouTube api with Bootstrap 3
+
 
 By: Mr. M.
 
