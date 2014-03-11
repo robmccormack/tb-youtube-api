@@ -15,18 +15,11 @@ $(document).ready(function() {
     var id = "vslQm7IYME4";
     var t = 0; // time to start in seconds
 
-    // $('#alertmess').show().fadeOut(3000).delay(5000);
-
-    //sleep(6000);
-    //$('#alertmess').show().fadeOut(10000);
-    //alert('NOTE: \n\nThe YouTube embed, the thumbnails are all retrieved via YouTube\'s API. \n\n\n Look behind this alert box, to see the page the way it looks before receiving data from YouTube.');
-
     /*
-// pass the id and the start time to function
-
-$(function() {
+ pass the id and the start time to function
+ $(function() {
 setTimeout("getYouTubeInfo(id, t)", 8000);
-});
+ });
 */
     // pause the script, to allow message to be read
 
