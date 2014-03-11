@@ -134,6 +134,16 @@ function parseresults(data) {
     $('#yt-duration').html('<b>Duration: </b><small>' + duration + '</small>');
 }
 
+
+var spin = "⣾⣽⣻⢿⡿⣟⣯⣷",
+    title$ = $('#spinner'),
+    i = 0;
+setInterval(function() {
+    i = i == spin.length - 1 ? 0 : ++i;
+    title$.text(spin[i]);
+}, 300);
+
+
 function addCommas(nStr) {
     nStr += '';
     x = nStr.split('.');
