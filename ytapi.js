@@ -28,6 +28,22 @@ setTimeout("getYouTubeInfo(id, t)", 8000);
     //getYouTubeInfo(id, t);
 
     // $('#alertmess').show().fadeOut(3000);
+
+    // Change opacity on thumbs
+    $(".yt-fade").css("opacity", 0.5);
+    $(".yt-fade").hover(function() {
+        $(this).animate({
+            opacity: 1.0
+        }, 500);
+    }, function() {
+        $(this).animate({
+            opacity: 0.3
+        }, 500);
+    });
+
+
+
+
 });
 
 
@@ -128,12 +144,14 @@ function parseresults(data) {
 
     $('#yt-thumbnail').hide().html('<img src=" ' + thumbnail + '" alt="">').delay(500).fadeIn(4000);
 
-    $('#yt-thumbnail1').hide().html('<img src=" ' + thumbnail1 + '" alt="" class="img-rounded yt-pad5">').fadeIn(2000);
-    $('#yt-thumbnail2').hide().html('<img src=" ' + thumbnail2 + '" alt="" class="img-rounded yt-pad5">').fadeIn(3000);
-    $('#yt-thumbnail3').hide().html('<img src=" ' + thumbnail3 + '" alt="" class="img-rounded yt-pad5">').fadeIn(4000);
+    $('#yt-thumbnail1').hide().html('<img src=" ' + thumbnail1 + '" alt="" class="img-rounded yt-fade yt-pad5">').fadeIn(2000);
+    $('#yt-thumbnail2').hide().html('<img src=" ' + thumbnail2 + '" alt="" class="img-rounded yt-fade yt-pad5">').fadeIn(3000);
+    $('#yt-thumbnail3').hide().html('<img src=" ' + thumbnail3 + '" alt="" class="img-rounded yt-fade yt-pad5">').fadeIn(4000);
     34
     $('#yt-duration').html('<b>Duration: </b><small>' + duration + '</small>');
 }
+
+
 
 
 var spin = "⣾⣽⣻⢿⡿⣟⣯⣷",
