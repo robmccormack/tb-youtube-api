@@ -10,6 +10,7 @@ http://stackoverflow.com/questions/5194619/getting-youtube-video-information-usi
 */
 
 $(document).ready(function() {
+    //  starting video
     var id = "vslQm7IYME4";
     var t = 0; // time to start in seconds
 
@@ -23,7 +24,7 @@ setTimeout("getYouTubeInfo(id, t)", 8000);
 
     myVar = setTimeout(function() {
         getYouTubeInfo(id, t);
-    }, 5000);
+    }, 3000);
     //getYouTubeInfo(id, t);
 
     // $('#alertmess').show().fadeOut(3000);
@@ -125,19 +126,18 @@ function parseresults(data) {
     $('#yt-viewcount').html('<br/><b>Views</b>: ' + addCommas(viewcount));
 
 
-    $('#yt-thumbnail').hide().html('<img src=" ' + thumbnail + '" alt="">').delay(2000).fadeIn(4000);
+    $('#yt-thumbnail').hide().html('<img src=" ' + thumbnail + '" alt="">').delay(500).fadeIn(4000);
 
-    $('#yt-thumbnail1').html('<img src=" ' + thumbnail1 + '" alt="" class="img-rounded pad5">');
-    $('#yt-thumbnail2').html('<img src=" ' + thumbnail2 + '" alt="" class="img-rounded pad5">');
-    $('#yt-thumbnail3').html('<img src=" ' + thumbnail3 + '" alt="" class="img-rounded pad5">');
-
-
+    $('#yt-thumbnail1').hide().html('<img src=" ' + thumbnail1 + '" alt="" class="img-rounded yt-pad5">').fadeIn(2000);
+    $('#yt-thumbnail2').hide().html('<img src=" ' + thumbnail2 + '" alt="" class="img-rounded yt-pad5">').fadeIn(3000);
+    $('#yt-thumbnail3').hide().html('<img src=" ' + thumbnail3 + '" alt="" class="img-rounded yt-pad5">').fadeIn(4000);
+    34
     $('#yt-duration').html('<b>Duration: </b><small>' + duration + '</small>');
 }
 
 
 var spin = "⣾⣽⣻⢿⡿⣟⣯⣷",
-    title$ = $('#spinner'),
+    title$ = $('#yt-spinner'),
     i = 0;
 setInterval(function() {
     i = i == spin.length - 1 ? 0 : ++i;
@@ -160,7 +160,7 @@ function addCommas(nStr) {
 
 //http://stackoverflow.com/questions/6312993/javascript-seconds-to-time-with-format-hhmmss
 String.prototype.toHHMMSS = function() {
-    var sec_num = parseInt(this, 10); // don't forget the second param
+    var sec_num = parseInt(this, 10); // don't forget the second parameters
     var hours = Math.floor(sec_num / 3600);
     var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
     var seconds = sec_num - (hours * 3600) - (minutes * 60);
