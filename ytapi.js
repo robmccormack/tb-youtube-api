@@ -29,22 +29,12 @@ setTimeout("getYouTubeInfo(id, t)", 8000);
 
     // $('#alertmess').show().fadeOut(3000);
 
-    // Change opacity on thumbs
-    $(".yt-fade").css("opacity", 0.5);
-    $(".yt-fade").hover(function() {
-        $(this).animate({
-            opacity: 1.0
-        }, 500);
-    }, function() {
-        $(this).animate({
-            opacity: 0.3
-        }, 500);
-    });
 
 
 
 
-});
+
+}); // end.doc.ready fn
 
 
 $(function() {
@@ -134,7 +124,7 @@ function parseresults(data) {
     //  $('#message').hide().html("You clicked on a checkbox.").fadeIn('slow');
 
     $('.yt-description').hide().html('<b>Description</b>: ' + description).fadeIn(3000);
-    $('#yt-author').hide().html('<b>Author</b>: ' + author).fadeIn(5000);
+    $('#yt-author').hide().html('by: ' + author).fadeIn(5000);
     $('#yt-published').html('<b>Published</b>: <small> ' + published + '</small>');
 
 
@@ -142,14 +132,27 @@ function parseresults(data) {
     $('#yt-viewcount').html('<br/><b>Views</b>: ' + addCommas(viewcount));
 
 
-    $('#yt-thumbnail').hide().html('<img src=" ' + thumbnail + '" alt="">').delay(500).fadeIn(4000);
-
     $('#yt-thumbnail1').hide().html('<img src=" ' + thumbnail1 + '" alt="" class="img-rounded yt-fade yt-pad5">').fadeIn(2000);
     $('#yt-thumbnail2').hide().html('<img src=" ' + thumbnail2 + '" alt="" class="img-rounded yt-fade yt-pad5">').fadeIn(3000);
     $('#yt-thumbnail3').hide().html('<img src=" ' + thumbnail3 + '" alt="" class="img-rounded yt-fade yt-pad5">').fadeIn(4000);
-    34
+    $('#yt-thumbnail').hide().html('<img src=" ' + thumbnail + '" alt="" class="img-rounded yt-fade yt-pad5">').fadeIn(5000);
+
     $('#yt-duration').html('<b>Duration: </b><small>' + duration + '</small>');
-}
+
+    // Change opacity on thumbs
+    $(".yt-fade").css("opacity", 0.5);
+    $(".yt-fade").hover(function() {
+        $(this).animate({
+            opacity: 1.0
+        }, 500);
+    }, function() {
+        $(this).animate({
+            opacity: 0.3
+        }, 500);
+    });
+
+} // end parse results fn
+
 
 
 

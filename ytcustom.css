@@ -1,8 +1,14 @@
 .container {
-  margin-top: 0
+  margin-top: 15px;
 }
 
+.panel-body{
+  min-height:285px;
+}
 
+.panel-footer{
+  min-height:140px;
+}
 
 .yt-pad5 {
   padding: 15px
@@ -30,6 +36,6 @@ Reference: http://avexdesigns.com/responsive-youtube-embed/
 #yt-spinner {
     color:#999;
     margin: 1em;
-    font-size: 24px;
+    font-size: 30px;
 
 }
