@@ -189,6 +189,7 @@ function addCommas(nStr) {
 
 //http://stackoverflow.com/questions/6312993/javascript-seconds-to-time-with-format-hhmmss
 String.prototype.toHHMMSS = function() {
+
     var sec_num = parseInt(this, 10); // don't forget the second parameters
     var hours = Math.floor(sec_num / 3600);
     var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
@@ -203,6 +204,7 @@ String.prototype.toHHMMSS = function() {
     if (seconds < 10) {
         seconds = "0" + seconds;
     }
-    var time = hours + ':' + minutes + ':' + seconds;
+    // put some formatting in so  seconds are small
+    var time = hours + ':' + minutes + ':' + '<small>' + seconds + '</small>';
     return time;
 }
