@@ -12,8 +12,12 @@ Status:
 http://bootsnipp.com/user/snippets/93RW
 
 
-###Screen Shot
+###Screen Shots
 ![](https://raw.github.com/robmccormack/tb-youtube-api/master/img_docs/screenshot1.png)
+
+---
+
+![](https://raw.github.com/robmccormack/tb-youtube-api/master/img_docs/screen-responsive.png)
 
 
 
