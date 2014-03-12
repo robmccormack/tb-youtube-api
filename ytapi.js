@@ -79,13 +79,25 @@ function parseresults(data) {
     var published = data.entry.published.$t;
 
 
+
+
+    // alert(published = published.substring(1, 16));
+
+
     /* from JSON file, date format
         "published": {
       "$t": "2014-02-03T13:46:12.000Z"
     */
 
+
+
+
+
     // convert the date
     var published = new Date(published);
+    published = published.toString();
+    published = published.substring(0, 16);
+    // alert(res);
 
     // thumbnail is an array, zero id default
     var thumbnail = data.entry.media$group.media$thumbnail[0].url;
@@ -123,13 +135,12 @@ function parseresults(data) {
     // can we fade in?
     //  $('#message').hide().html("You clicked on a checkbox.").fadeIn('slow');
 
-    $('.yt-description').hide().html('<b>Description</b>: ' + description).fadeIn(3000);
+    $('.yt-description').hide().html(description).fadeIn(3000);
     $('#yt-author').hide().html('by: ' + author).fadeIn(5000);
-    $('#yt-published').html('<b>Published</b>: <small> ' + published + '</small>');
 
+    $('#yt-published').html('<small> ' + published + '</small>');
 
-
-    $('#yt-viewcount').html('<br/><b>Views</b>: ' + addCommas(viewcount));
+    $('#yt-viewcount').html('<br/>' + addCommas(viewcount));
 
 
     $('#yt-thumbnail1').hide().html('<img src=" ' + thumbnail1 + '" alt="" class="img-rounded yt-fade yt-pad5">').fadeIn(2000);
@@ -137,7 +148,9 @@ function parseresults(data) {
     $('#yt-thumbnail3').hide().html('<img src=" ' + thumbnail3 + '" alt="" class="img-rounded yt-fade yt-pad5">').fadeIn(4000);
     $('#yt-thumbnail').hide().html('<img src=" ' + thumbnail + '" alt="" class="img-rounded yt-fade yt-pad5">').fadeIn(5000);
 
-    $('#yt-duration').html('<b>Duration: </b><small>' + duration + '</small>');
+    $('#yt-duration').html('<span class="glyphicon glyphicon-time"></span> &nbsp;' + duration);
+
+
 
     // Change opacity on thumbs
     $(".yt-fade").css("opacity", 0.5);
@@ -177,6 +190,7 @@ function addCommas(nStr) {
     }
     return x1 + x2;
 }
+
 
 
 //http://stackoverflow.com/questions/6312993/javascript-seconds-to-time-with-format-hhmmss
