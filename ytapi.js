@@ -6,6 +6,7 @@
 
 
 /*
+Ref:
 http://stackoverflow.com/questions/5194619/getting-youtube-video-information-using-javascript-jquery
 */
 
@@ -26,13 +27,6 @@ setTimeout("getYouTubeInfo(id, t)", 8000);
         getYouTubeInfo(id, t);
     }, 3000);
     //getYouTubeInfo(id, t);
-
-    // $('#alertmess').show().fadeOut(3000);
-
-
-
-
-
 
 }); // end.doc.ready fn
 
@@ -140,7 +134,7 @@ function parseresults(data) {
 
     $('#yt-published').html('<small> ' + published + '</small>');
 
-    $('#yt-viewcount').html('<br/>' + addCommas(viewcount));
+    $('#yt-viewcount').html('<p>' + addCommas(viewcount) + ' <small>views</small></p>');
 
 
     $('#yt-thumbnail1').hide().html('<img src=" ' + thumbnail1 + '" alt="" class="img-rounded yt-fade yt-pad5">').fadeIn(2000);
