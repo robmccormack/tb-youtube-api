@@ -137,10 +137,10 @@ function parseresults(data) {
     $('#yt-viewcount').html('<p>' + addCommas(viewcount) + ' <small>views</small></p>');
 
 
-    $('#yt-thumbnail1').hide().html('<img src=" ' + thumbnail1 + '" alt="" class="img-rounded yt-fade yt-pad5">').fadeIn(2000);
-    $('#yt-thumbnail2').hide().html('<img src=" ' + thumbnail2 + '" alt="" class="img-rounded yt-fade yt-pad5">').fadeIn(3000);
-    $('#yt-thumbnail3').hide().html('<img src=" ' + thumbnail3 + '" alt="" class="img-rounded yt-fade yt-pad5">').fadeIn(4000);
-    $('#yt-thumbnail').hide().html('<img src=" ' + thumbnail + '" alt="" class="img-rounded yt-fade yt-pad5">').fadeIn(5000);
+    $('#yt-thumbnail1').hide().html('<img src=" ' + thumbnail1 + '" alt="" class="img-rounded yt-fade yt-pad10">').fadeIn(2000);
+    $('#yt-thumbnail2').hide().html('<img src=" ' + thumbnail2 + '" alt="" class="img-rounded yt-fade yt-pad10">').fadeIn(3000);
+    $('#yt-thumbnail3').hide().html('<img src=" ' + thumbnail3 + '" alt="" class="img-rounded yt-fade yt-pad10">').fadeIn(4000);
+    $('#yt-thumbnail').hide().html('<img src=" ' + thumbnail + '" alt="" class="img-rounded yt-fade yt-pad10">').fadeIn(5000);
 
     $('#yt-duration').html('<span class="glyphicon glyphicon-time"></span> &nbsp;' + duration);
 

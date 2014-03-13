@@ -3,14 +3,17 @@
 }
 
 .panel-body{
-  min-height:185px;
+  min-height:260px;
 }
 
 
 .yt-pad5 {
-  padding: 15px
+  padding: 5px;
 }
 
+.yt-pad10 {
+  padding: 10px;
+}
 /*
 Reference: http://avexdesigns.com/responsive-youtube-embed/
 */
